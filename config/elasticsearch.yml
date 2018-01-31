@@ -1,0 +1,11 @@
+development: &default
+  host: 'http://18.218.159.252:9201/'
+test:
+  <<: *default
+staging:
+  <<: *default
+production:
+  host: 'http://10.50.11.50/'
+  transport_options:
+    request:
+      timeout: !!integer 300
